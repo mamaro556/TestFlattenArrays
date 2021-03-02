@@ -14,6 +14,15 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    // Mark: Actions
+    @IBAction func flattenArrays(_ sender: UIButton) {
 
+        let arrayObject: ClassA = ClassA()
+        arrayObject.flattenArray()
+        
+        let flattenedArray:[String] = arrayObject.flattenedArray
+
+        print(flattenedArray.joined(separator: ", "))
+    }
 }
 

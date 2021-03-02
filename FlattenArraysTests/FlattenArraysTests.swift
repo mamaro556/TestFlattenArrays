@@ -30,4 +30,13 @@ class FlattenArraysTests: XCTestCase {
         }
     }
 
+    func testFlattenArray() {
+        let arrayObject: ClassA = ClassA()
+        arrayObject.buildAnswerArray()
+        let answerArray: [String] = arrayObject.answerArray
+        arrayObject.flattenArray()
+        
+        let flattenedArray:[String] = arrayObject.flattenedArray
+        XCTAssertEqual(flattenedArray.joined(separator: ", "), answerArray.joined(separator: ", "),"Arrays not equal")
+    }
 }
